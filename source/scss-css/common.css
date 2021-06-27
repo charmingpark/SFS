@@ -242,10 +242,6 @@ vw-calc770(태블릿 사이즈size) {
     text-align: center;
     text-transform: uppercase; }
 
-.search .search_slide_out,
-.menu .menu_slide_out {
-  display: none; }
-
 .search.on .search_slide_out,
 .menu.on .menu_slide_out {
   z-index: 21;
@@ -292,6 +288,10 @@ vw-calc770(태블릿 사이즈size) {
     .main_menu > ul ul li a {
       display: block;
       font-weight: 600; }
+    .main_menu > ul ul li em {
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 20px; }
 
 .sticky {
   border-radius: 5% 0 0 5%;
@@ -370,24 +370,42 @@ vw-calc770(태블릿 사이즈size) {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 60px;
+  bottom: 50px;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 3;
   width: 80px;
-  height: 70px;
+  height: 72px;
   background: url(../images/SVG/explr.svg) no-repeat 100%/cover;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff !important;
+  -webkit-animation: upNdown 2s linear infinite both;
+  -moz-animation: upNdown 2s linear infinite both;
+  animation: upNdown 2s linear infinite both;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */ }
-  .explr span {
-    padding: 50px;
-    letter-spacing: 2.5px;
-    line-height: 15px;
-    font: normal 11px/13px "Raleway", sans-serif;
-    color: #fff;
-    font-weight: 800;
-    text-transform: uppercase; }
+
+@-webkit-keyframes upNdown {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); } }
+@keyframes upNdown {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px); } }
 
 /*# sourceMappingURL=common.css.map */

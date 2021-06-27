@@ -50,7 +50,7 @@
           </a>
         </h1>
         <div class="util">
-          <div class="search">
+          <div class="search on">
             <!-- on 지우기 -->
             <!-- 찾기 버튼 : svg .css(fill)에서 색상변경-->
             <button class="btn_open md_open" type="button" aria-haspopup="dialog" title="open search modal page"
@@ -89,17 +89,16 @@
                   </ul>
                 </nav>
               </section>
-              <button class="btn_close" type="button" data-link="last">
+              <button class="btn_close md_close" type="button" data-link="last">
                 <!-- 가상요소 : 닫기버튼 X.img -->
                 <span class="blind">close search slider</span>
               </button>
             </div><!-- 맨 아래로 빼도 됨. js에서 부모값을 따르는 속성을 모두 제어해주어야함.. -->
           </div>
-          <div class="menu">
-            <button class="menu_open" type="button" aria-haspopup="dialog" title="open menu modal page"
+          <div class="menu on">
+            <button class="menu_open md_open" type="button" aria-haspopup="dialog" title="open menu modal page"
               data-href="#menu_modal">MENU &nbsp;<i class="fas fa-bars"></i></button>
-            <div id="menu_modal" class="menu_slide_out md_cnt" role="dialog" aria-modal="true"
-              aria-labelledby="site_menu"><!-- TODO: -->
+            <div id="menu_modal" class="menu_slide_out md_cnt" role="dialog" aria-modal="true"              aria-labelledby="menu_modal"><!-- TODO: -->
               <div class="menuTop">
                 <nav class="sub_menu">
                   <ul>
@@ -121,7 +120,7 @@
                   <button class="btn_open md_open" type="button" aria-haspopup="dialog" title="search modal page"
                     data-href="#search_modal"></button>
                 </div>
-                <button class="menu_close" type="button" aria-haspopup="dialog" title="menu modal page"
+                <button class="menu_close md_close" type="button" aria-haspopup="dialog" title="menu modal page"
                   data-href="#menu_modal">CLOSE &nbsp;<i class="fas fa-minus"></i></button>
               </div>
               <nav class="main_menu">
@@ -167,7 +166,7 @@
                     <a href="/extracurriculars">Extracurriculars</a>
                     <ul>
                       <li><a href="/extracurriculars/athletics">Athletics</a></li>
-                      <li><a href="/extracurriculars/schoolwide-extracurricular-program-swep">Schoolwide Extracurricular Program (SWEP)</a></li>
+                      <li><a href="/extracurriculars/schoolwide-extracurricular-program-swep">SWEP <em>Schoolwide Extracurricular Program</em></a></li>
                       <li><a href="https://www.campsfs.org/" target="_blank" title="opens in new window">Camp</a></li>
                       <li><a href="/extracurriculars/christian-ministries">Christian Ministries &amp; Service</a></li>
                     </ul>
@@ -226,7 +225,7 @@
         </div>
       </div>
       <a class="explr" href="#PageBodyWraper">
-        <span>Explore</span>
+        Explore
       </a><!-- 클릭하면 scrollTop값 올려주기 -->
     </div>
   </header>

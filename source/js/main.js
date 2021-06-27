@@ -23,11 +23,9 @@ document.addEventListener('DOMContentLoaded', function(){
     playButton.style.visibility = "visible";
   });
   
+});
 
-  
-
-
-// 더 짧게도 만들 수 있음
+// 자동실행과 일시정지 버튼 추가
 /* $('#cnt1 .swiper-auto-wrap button').on('click', function () {
   const btnNum = $(this).index();
   console.log(btnNum);  //자동실행0,일시정지1 
