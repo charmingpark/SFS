@@ -1,0 +1,10 @@
+@charset "utf-8";
+@import "_var", "_mixin", "_function";
+
+.fullVdo {
+  a {
+    font-family: $beauty;
+    color: #fff;
+    em{font-weight: 600;}
+  }
+}

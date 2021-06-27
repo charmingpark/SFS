@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* #f0c2c9 , #ffdbe1 */
+/* 
+*/
+/* TODO: 본문글씨 공통클래스 */
+/* @include translateY-50;
+    position: absolute;top: 50%; */
+    /* #1a1b1b
+#444 
+#b20000 wine
+#F0C2C9 wht wine
+#720000 wine:hover */
+/* #262A2D midnight */
+/* #FBF7EF (251,247,239) */
+/* https://codepen.io/g1eb/pen/MpXQZN dash-array */
+/* 초중고 섹션 30px 로 apis 따라하기 */
+/* 말줄임표 (line-clamp) */
+/* 
+
+@include animation(fadeUp 1.5s forwards);
+
+@-webkit-keyframes fadeUp {
+  0%{opacity: 0;-webkit-transform: translateY(50px);}
+  100%{opacity: 1;-webkit-transform: translateY(0px);}
+}
+@-moz-keyframes fadeUp {
+  0%{opacity: 0;-moz-transform: translateY(50px);}
+  100%{opacity: 1;-moz-transform: translateY(0px);}
+}
+@keyframes fadeUp {
+  0%{opacity: 0;transform: translateY(50px);}
+  100%{opacity: 1;transform: translateY(0px);}
+
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+*/
+/* 
+태블릿크기 x 1.07(비율로 더 크게 보이도록) = ??px => vw로 환산하자
+30 X 1.07 = 32.1px
+
+770px 에서 1vw의 크기가 얼마인지??
+770(해상도) / 100 = 7.7px
+
+32.1px / 7.7px = 4.168831168831169vw
+
+vw-calc770(태블릿 사이즈size) {
+  (size * 1.07) / (770 / 100)
+} 
+
+함수 만들기
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+함수 호출하기
+.box {
+  width: calc-percent(650px, 1000px);
+}
+*/
+/* 쓸때는 vw-calc770(40) 이렇게 px빼고 적는다 */
+/* 또는 calc(10% - 5.5584415584vw) 이렇게 적음 */
+#skip a:focus {
+  height: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  border-bottom: 3px solid #b20000; }
+
+#headerWrap {
+  width: 100%;
+  min-height: 700px;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute; }
+
+#Header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #b20000 url(../images/poster.jpg) no-repeat 100%/cover; }
+  #Header #HeaderVideo {
+    position: absolute;
+    top: -19%;
+    left: -11%;
+    width: 120%;
+    max-width: 140%;
+    height: 140%;
+    box-sizing: content-box;
+    pointer-events: none;
+    border: none; }
+  #Header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.5) 100%);
+    transition: 0.5s ease;
+    z-index: 2; }
+  #Header .headerTop,
+  #Header .headerBtm {
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100px;
+    padding: 0 60px;
+    box-sizing: border-box;
+    margin: 25px auto; }
+
+.logo a {
+  display: block;
+  height: 100px;
+  width: 400px; }
+
+.search {
+  margin-right: 160px;
+  height: 100%;
+  width: 50px; }
+  .search .btn_open {
+    width: 100%;
+    height: 100%; }
+    .search .btn_open::after {
+      left: 0;
+      right: 0;
+      margin: -10px auto;
+      width: 30px;
+      height: 30px; }
+  .search.on .search_slide_out {
+    width: 450px; }
+    .search.on .search_slide_out h2 {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      margin-bottom: 10px; }
+    .search.on .search_slide_out .top {
+      height: 60px;
+      margin-bottom: 2.5rem;
+      letter-spacing: 1px; }
+      .search.on .search_slide_out .top label {
+        margin: 14px 20px;
+        line-height: 32px; }
+        .search.on .search_slide_out .top label.typing {
+          width: 30ch; }
+      .search.on .search_slide_out .top input {
+        padding: 14px 20px;
+        letter-spacing: 1px; }
+      .search.on .search_slide_out .top .search_button {
+        width: 62px;
+        height: 62px; }
+        .search.on .search_slide_out .top .search_button::after {
+          top: calc(50% - (28px / 2));
+          width: 25px;
+          height: 25px; }
+    .search.on .search_slide_out .nav_utility_search {
+      letter-spacing: 0.5px; }
+    .search.on .search_slide_out .btn_close {
+      left: -3.75rem;
+      width: 3.75rem;
+      height: 3.75rem; }
+
+.menu {
+  /* &.scroll_down {}
+
+  
+  // 스크롤을 내리면 i태그만 빼놓고 사라짐 (모바일에서도 이걸로 사용함.) 
+  
+  */ }
+  .menu .menu_open,
+  .menu .menu_close {
+    top: 3rem;
+    right: 4rem;
+    line-height: 60px;
+    position: fixed;
+    width: 100vw;
+    max-width: 8.375rem;
+    height: 100vh;
+    max-height: 3.75rem;
+    font-size: 14px;
+    letter-spacing: 3.82px; }
+  .menu.on .menu_slide_out {
+    width: 800px;
+    max-width: 900px; }
+    .menu.on .menu_slide_out .search {
+      margin-right: 160px; }
+
+.menuTop {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between; }
+  .menuTop .sub_menu ul li {
+    margin-right: 20px;
+    height: 100px; }
+    .menuTop .sub_menu ul li a {
+      font-size: 11px;
+      letter-spacing: 3px;
+      line-height: 110px; }
+
+.search.on .search_slide_out,
+.menu.on .menu_slide_out {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 25px 60px;
+  box-sizing: border-box;
+  height: 100vh;
+  background: rgba(53, 63, 76, 0.95); }
+
+.main_menu {
+  margin: 60px 0 200px;
+  width: 50%; }
+  .main_menu > ul > li {
+    width: 100%;
+    height: 80px; }
+    .main_menu > ul > li > a {
+      display: inline-block;
+      position: relative;
+      height: 80px;
+      width: 100%;
+      line-height: 80px;
+      font-size: 35px;
+      letter-spacing: 3px;
+      overflow: hidden; }
+  .main_menu > ul ul {
+    width: 100%;
+    height: 100%;
+    font-size: 9px;
+    left: 100%;
+    top: 0; }
+    .main_menu > ul ul li {
+      top: 0;
+      left: 0; }
+      .main_menu > ul ul li a {
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 50px;
+        letter-spacing: 1.5px; }
+
+.apply_to {
+  box-sizing: border-box;
+  height: 60px;
+  width: 280px;
+  padding: 14px 23px;
+  top: -120px;
+  position: relative;
+  line-height: 30px;
+  overflow: hidden; }
+  .apply_to svg {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    padding: 5px 10px 5px 210px;
+    top: -5px;
+    right: 0; }
+
+.sticky {
+  position: absolute;
+  top: 50%;
+  right: calc(-165px - -48px);
+  transform: translateY(-50%);
+  width: 165px;
+  z-index: 2; }
+  .sticky li {
+    height: 48px;
+    width: 100%; }
+    .sticky li a {
+      height: 48px;
+      letter-spacing: 3.5px;
+      font-size: 13px; }
+    .sticky li img {
+      width: 48px;
+      height: 48px; }
+    .sticky li span {
+      display: block; }
+
+#dim,
+.md_cnt {
+  position: fixed;
+  z-index: 1000; }
+
+#dim {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 600px) {
+  .headerTop {
+    padding-left: 20px; } }
+
+/*# sourceMappingURL=layout.css.map */
