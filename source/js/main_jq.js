@@ -37,7 +37,7 @@ $(function () {
 		$header.removeClass('active');
 
 		//활성화
-		$(this).parent().has('ul').closest($header).addClass('active'); //100% 너비의 파랑바 생성을 위한 클래스명 추가
+		$(this).parent().has('ul').closest($header).addClass('active'); //100% 너비의 밑줄 바 생성을 위한 클래스명 추가
 		$(this).next().show().parent().addClass('on');
 	});
 

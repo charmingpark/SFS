@@ -393,15 +393,96 @@ vw-calc770(태블릿 사이즈size) {
   animation: upNdown 2s linear infinite both;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */ }
 
+#PageBodyWraper {
+  position: relative;
+  border-top: 5px solid #b20000; }
+  #PageBodyWraper #cnt1 {
+    width: 100%;
+    height: 700px;
+    /* 제어 안되고있음 : 수정필요 */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    #PageBodyWraper #cnt1 header.controller {
+      width: 35%;
+      height: 100%; }
+    #PageBodyWraper #cnt1 article.board {
+      width: 65%;
+      height: 100%;
+      position: relative;
+      overflow: hidden; }
+      #PageBodyWraper #cnt1 article.board ul {
+        /* 제어 안되고있음 : 수정필요 */
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        position: absolute; }
+      #PageBodyWraper #cnt1 article.board li {
+        width: 29vw;
+        height: 100%; }
+        #PageBodyWraper #cnt1 article.board li:nth-child(odd) {
+          background: #FBF7EF; }
+        #PageBodyWraper #cnt1 article.board li .section {
+          position: relative; }
+          #PageBodyWraper #cnt1 article.board li .section h3 {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: #b20000;
+            font-weight: 300;
+            margin-bottom: 1rem; }
+          #PageBodyWraper #cnt1 article.board li .section .photo {
+            position: absolute;
+            top: 275px;
+            left: 0;
+            width: 100%;
+            height: 270px;
+            border: 1px solid #000;
+            background: no-repeat 100% / cover; }
+          #PageBodyWraper #cnt1 article.board li .section .moreBtn {
+            position: absolute;
+            top: 590px;
+            left: 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            line-height: 19px;
+            font-family: "Raleway", sans-serif; }
+      #PageBodyWraper #cnt1 article.board li:nth-of-type(1) {
+        /* juicer를 이용해 주소로 이미지 불러오기  */ }
+        #PageBodyWraper #cnt1 article.board li:nth-of-type(1) .photo {
+          background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
+      #PageBodyWraper #cnt1 article.board li:nth-of-type(2) .photo {
+        background: url(); }
+  #PageBodyWraper header.controller,
+  #PageBodyWraper article.board li {
+    padding: 45px 50px;
+    box-sizing: border-box; }
+  #PageBodyWraper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10286px;
+    top: -52vh;
+    left: 0;
+    background: url(../images/bodylayout.jpg) no-repeat 100%/contain;
+    z-index: -1;
+    opacity: 0.2; }
+
 @-webkit-keyframes upNdown {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   50% {
     -webkit-transform: translateY(-10px);
     transform: translateY(-10px); } }
 @keyframes upNdown {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   50% {
