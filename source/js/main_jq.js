@@ -15,8 +15,6 @@ $(function () {
 		}
 	});
 
-
-
 	/* 메뉴 모달 안에 있는 네비게이션*/
 	// dep2의 ul로 가면 dep1의 애니메이션이 남아있게 제어하기
 	const $header = $('#headerWrap');
@@ -60,9 +58,6 @@ $(function () {
 
 	//6) 페이지 로딩후 보여질 화면 => li.on 넣어서 스타일이 적용된 화면
 	if (dep1 >= 0) $gnb.trigger('mouseleave');
-
-
-
 
 	$('.md_open').on('click', function () {
 		// 1) 변수선언 : 열기버튼, 열려질 상세 모달 내용, 닫기버튼, 포커스를 처음가질 요소, 포커스를 마지막에 가질 요소

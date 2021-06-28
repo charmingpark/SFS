@@ -12,11 +12,10 @@
 }
 
 #headerWrap {
-  width: 100%;
-  min-height: 700px;
   height: 100vh;
+  min-height: 700px;
   overflow: hidden;
-  position: absolute;
+  box-sizing: border-box;
 }
 
 #Header {
@@ -48,7 +47,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.5) 100%);
-    transition: 0.5s ease;
+    @include transition (all 0.5s);
     z-index: 2;
   }
 
@@ -311,12 +310,17 @@
 }
 
 .sticky {
+  /* 이미지를 넣지않으면 live server에서는 사이즈에 문제있어 보임 */
   position: absolute;
   top: 50%;
   right: calc(-165px - -48px);
   transform: translateY(-50%);
   width: 165px;
   z-index: 2;
+  @include transition (all 0.5s);
+
+  &:hover{ right: 0; 
+  }/* js로 focus제어 */
 
   li {
     height: 48px;
@@ -340,14 +344,202 @@
   }
 }
 
+#PageBodyWraper {
+  bottom: 5px;
+
+  section {
+    width: 100%;
+    @include flex;
+    box-sizing: border-box;
+  }
+
+  #cnt1 {
+    height: 670px;
+    margin-bottom: 175px;
+    @include flex;
+
+    background: rgb(255, 255, 255);
+
+    .titleBox {
+      box-sizing: border-box;
+      padding: 25px 50px;
+      width: 100%;
+      max-width: 35%;
+
+      .btnBox {
+        margin-top: 50px;
+
+        button {
+          width: 53px;
+          height: 53px;
+
+        }
+      }
+    }
+
+    article.view {
+      width: 100%;
+      max-width: 65%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+
+      ul {
+        @include flex;
+        height: 100%;
+        position: absolute;
+      }
+
+      li {
+        box-sizing: border-box;
+        padding: 25px 45px;
+        width: 29vw;
+        height: 100%;
+
+        &:nth-child(even) {
+          background: rgb(255, 255, 255);
+        }
+
+        &:nth-child(odd) {
+          background: #FBF7EF;
+        }
+
+        .txtBox {
+          width: 100%;
+          height: 250px;
+
+
+          h3 {
+            font-size: 24px;
+
+            color: #b20000;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+        }
+
+        p {
+          width: 100%;
+          height: 120px;
+          /* 
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow : ellipsis; */
+        }
+
+        img {
+
+          width: 100%;
+          height: 270px;
+          background: no-repeat 100% / cover;
+        }
+
+        .moreBtn {
+          /* TODO: 여기까지 했음 */
+          display: block;
+          height: 40px;
+          margin-top: 40px;
+
+
+        }
+
+
+
+      }
+
+      li:nth-of-type(1) {
+
+        .photo {
+          background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640)
+        }
+
+        /* juicer를 이용해 주소로 이미지 불러오기  */
+      }
+
+      li:nth-of-type(2) {
+        .photo {
+          background: url();
+        }
+      }
+
+      li:nth-of-type(3) {}
+
+      li:nth-of-type(4) {}
+
+      li:nth-of-type(5) {}
+    }
+  }
+
+  #cnt2 {
+    border: 1px solid #000;
+    height: 660px;
+    margin-bottom: 175px;
+  }
+
+  #cnt3 {
+    height: 600px;
+    margin-bottom: 250px;
+  }
+
+  #cnt4 {
+    height: 850px;
+    margin-bottom: 240px;
+  }
+
+  #cnt5 {
+    height: 615px;
+    margin-bottom: 170px;
+  }
+
+  #cnt6 {
+    height: 850px;
+    margin-bottom: 190px;
+
+  }
+
+  #cnt7 {
+    /* 원본디자인 픽셀 그대로 가져오기 : 풋터까지 다 만들고 마지막에 제어 */
+    height: 1050px;
+    margin-bottom: 280px;
+  }
+
+  #cnt8 {
+    height: 780px;
+    margin-bottom: 250px;
+    background: rgba(208, 16, 16, 0.172);
+  }
+}
+
+#Footer {
+  .info {
+    height: 580px;
+    background: rgba(208, 16, 16, 0.172);
+  }
+
+  .copyR {
+    height: 85px;
+    background: rgba(16, 208, 70, 0.172);
+  }
+}
+
 
 
 #dim,
 .md_cnt {
   position: fixed;
-  z-index: 1000; visibility: hidden;
+  z-index: 1000;
+  visibility: hidden;
 }
-#dim{display: none;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.5);}
+
+#dim {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+}
 
 
 

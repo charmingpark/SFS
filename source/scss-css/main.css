@@ -66,10 +66,91 @@ vw-calc770(태블릿 사이즈size) {
 */
 /* 쓸때는 vw-calc770(40) 이렇게 px빼고 적는다 */
 /* 또는 calc(10% - 5.5584415584vw) 이렇게 적음 */
-.fullVdo a {
-  font-family: "Raleway", sans-serif !important;
-  color: #fff; }
-  .fullVdo a em {
-    font-weight: 600; }
+.fullVdo {
+  /* 제어 안되고있음 : 수정필요 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .fullVdo a {
+    display: block;
+    width: 300px;
+    height: 40px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    font-family: "Raleway", sans-serif !important;
+    color: #fff; }
+    .fullVdo a em {
+      font-weight: 600; }
+  .fullVdo .arrow::after {
+    content: "";
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background: #b20000 url(../images/SVG/full.svg) no-repeat 100%/cover;
+    right: -20px;
+    top: -16px;
+    position: absolute; }
+  .fullVdo a:hover .arrow, .fullVdo a:focus .arrow {
+    width: 85px; }
+
+.videoCtrl {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  right: 10px; }
+  .videoCtrl #play-button,
+  .videoCtrl #pause-button {
+    position: absolute;
+    width: 2.6875rem;
+    height: 2.6875rem;
+    border-radius: 50%; }
+  .videoCtrl #play-button {
+    background: #1a1b1b url(../images/SVG/play.svg) no-repeat 100%/cover;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .videoCtrl #pause-button {
+    background: #1a1b1b url(../images/SVG/pause.svg) no-repeat 100%/cover;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  .videoCtrl #play-button:hover,
+  .videoCtrl #pause-button:hover,
+  .videoCtrl #play-button:focus,
+  .videoCtrl #pause-button:focus {
+    background-color: #444; }
+
+.explr {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: 0 auto;
+  z-index: 3;
+  width: 80px;
+  height: 72px;
+  background: url(../images/SVG/explr.svg) no-repeat 100%/cover;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  letter-spacing: 2.5px;
+  line-height: 25px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff !important;
+  -webkit-animation: upNdown 2s linear infinite both;
+  -moz-animation: upNdown 2s linear infinite both;
+  animation: upNdown 2s linear infinite both;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */ }
 
 /*# sourceMappingURL=main.css.map */

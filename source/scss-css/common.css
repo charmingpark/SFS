@@ -115,7 +115,10 @@ vw-calc770(태블릿 사이즈size) {
     position: absolute;
     background: url(../images/SVG/search.svg) no-repeat 100%/contain;
     opacity: 0.95;
-    transition: all ease-in 0.4s; }
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
   .search .btn_open:hover::after, .search .btn_open:focus::after {
     transform: scale(1.3, 1.3); }
 .search.on {
@@ -312,165 +315,24 @@ vw-calc770(태블릿 사이즈size) {
     .sticky li a:hover, .sticky li a:focus {
       background: #720000; }
   .sticky li span {
-    display: block; }
+    padding: 10px; }
 
-.fullVdo {
-  font-family: normal 11px/13px "Raleway", sans-serif;
-  color: #fff; }
-  .fullVdo .arrow {
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s; }
-    .fullVdo .arrow::after {
-      content: "";
-      position: absolute;
-      display: block;
-      border-radius: 50%;
-      width: 33px;
-      height: 33px;
-      background: #b20000 url(../images/SVG/full.svg) no-repeat 100%/cover;
-      right: -20px;
-      top: -16px; }
-  .fullVdo a:hover .arrow, .fullVdo a:focus .arrow {
-    width: 55px; }
+header.controller,
+article.board li {
+  padding: 45px 50px;
+  box-sizing: border-box; }
 
-.videoCtrl {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  right: 10px; }
-  .videoCtrl #play-button,
-  .videoCtrl #pause-button {
-    position: absolute;
-    width: 2.6875rem;
-    height: 2.6875rem;
-    border-radius: 50%; }
-  .videoCtrl #play-button {
-    background: #1a1b1b url(../images/SVG/play.svg) no-repeat 100%/cover;
-    visibility: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
-  .videoCtrl #pause-button {
-    background: #1a1b1b url(../images/SVG/pause.svg) no-repeat 100%/cover;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s; }
-  .videoCtrl #play-button:hover,
-  .videoCtrl #pause-button:hover,
-  .videoCtrl #play-button:focus,
-  .videoCtrl #pause-button:focus {
-    background-color: #444; }
-
-.explr {
-  display: block;
+/* 뒤에 배경보고 레이아웃 만들기 */
+#cnt1::before {
+  content: "";
   position: absolute;
+  width: 100%;
+  height: 10286px;
+  top: -51vh;
   left: 0;
-  right: 0;
-  bottom: 50px;
-  margin: 0 auto;
-  z-index: 3;
-  width: 80px;
-  height: 72px;
-  background: url(../images/SVG/explr.svg) no-repeat 100%/cover;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  letter-spacing: 2.5px;
-  line-height: 25px;
-  font-size: 12px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff !important;
-  -webkit-animation: upNdown 2s linear infinite both;
-  -moz-animation: upNdown 2s linear infinite both;
-  animation: upNdown 2s linear infinite both;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */ }
-
-#PageBodyWraper {
-  position: relative;
-  border-top: 5px solid #b20000; }
-  #PageBodyWraper #cnt1 {
-    width: 100%;
-    height: 700px;
-    /* 제어 안되고있음 : 수정필요 */
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-    #PageBodyWraper #cnt1 header.controller {
-      width: 35%;
-      height: 100%; }
-    #PageBodyWraper #cnt1 article.board {
-      width: 65%;
-      height: 100%;
-      position: relative;
-      overflow: hidden; }
-      #PageBodyWraper #cnt1 article.board ul {
-        /* 제어 안되고있음 : 수정필요 */
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        height: 100%;
-        position: absolute; }
-      #PageBodyWraper #cnt1 article.board li {
-        width: 29vw;
-        height: 100%; }
-        #PageBodyWraper #cnt1 article.board li:nth-child(odd) {
-          background: #FBF7EF; }
-        #PageBodyWraper #cnt1 article.board li .section {
-          position: relative; }
-          #PageBodyWraper #cnt1 article.board li .section h3 {
-            font-size: 1.4rem;
-            line-height: 2rem;
-            color: #b20000;
-            font-weight: 300;
-            margin-bottom: 1rem; }
-          #PageBodyWraper #cnt1 article.board li .section .photo {
-            position: absolute;
-            top: 275px;
-            left: 0;
-            width: 100%;
-            height: 270px;
-            border: 1px solid #000;
-            background: no-repeat 100% / cover; }
-          #PageBodyWraper #cnt1 article.board li .section .moreBtn {
-            position: absolute;
-            top: 590px;
-            left: 0;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            line-height: 19px;
-            font-family: "Raleway", sans-serif; }
-      #PageBodyWraper #cnt1 article.board li:nth-of-type(1) {
-        /* juicer를 이용해 주소로 이미지 불러오기  */ }
-        #PageBodyWraper #cnt1 article.board li:nth-of-type(1) .photo {
-          background-image: url(https://img.juicer.io/ig/image/CQXqXzQCMwJ?s=6b66372c17f05be30d3211c0fe8e55c4ec7d1640); }
-      #PageBodyWraper #cnt1 article.board li:nth-of-type(2) .photo {
-        background: url(); }
-  #PageBodyWraper header.controller,
-  #PageBodyWraper article.board li {
-    padding: 45px 50px;
-    box-sizing: border-box; }
-  #PageBodyWraper::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10286px;
-    top: -52vh;
-    left: 0;
-    background: url(../images/bodylayout.jpg) no-repeat 100%/contain;
-    z-index: -1;
-    opacity: 0.2; }
+  background: url(../images/bodylayout.jpg) no-repeat 100%/contain;
+  z-index: -1;
+  opacity: 0.2; }
 
 @-webkit-keyframes upNdown {
   0%,
