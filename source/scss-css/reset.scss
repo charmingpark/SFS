@@ -189,13 +189,31 @@ body {
     }
   }
 }
-
 .btnBox {
   margin-top: 50px;
 
   button {
     width: 53px;
     height: 53px;
+    background: no-repeat 100% / cover;
 
+    &:nth-of-type(1) {
+      background: url(../images/SVG/left_crl_arrow.svg);
+
+      &:hover,
+      &:focus {
+        background: url(../images/SVG/left_crl_arrow_on.svg);
+      }/* 다음에 기회가 되면 $rosewine 로 바꿔주세요 */
+    }
+    
+    &:nth-of-type(2) {
+      background: url(../images/SVG/right_crl_arrow.svg);
+      
+            &:hover,
+            &:focus {
+              background: url(../images/SVG/right_crl_arrow_on.svg);
+      
+            }
+    }
   }
 }
