@@ -12,10 +12,10 @@
 }
 
 #headerWrap {
-  height: 100vh;
+  /* height: 100vh;
   min-height: 700px;
   overflow: hidden;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
 #Header {
@@ -25,6 +25,8 @@
   height: 0;
   padding-bottom: 50%;
   background: #b20000 url(../images/poster.jpg) no-repeat 100%/cover;
+  box-sizing: border-box;
+  border-bottom: 4px solid $wine;
 
   #HeaderVideo {
     position: absolute;
@@ -310,8 +312,9 @@
 }
 
 .sticky {
+  /* sticky 로 만들고 싶음 */
   /* 이미지를 넣지않으면 live server에서는 사이즈에 문제있어 보임 */
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: calc(-165px - -48px);
   transform: translateY(-50%);
@@ -358,7 +361,7 @@
     margin-bottom: 175px;
     @include flex;
 
-    background: rgb(255, 255, 255);
+    //background: rgb(255, 255, 255);
 
     .titleBox {
       box-sizing: border-box;
@@ -394,7 +397,7 @@
       li {
         box-sizing: border-box;
         padding: 25px 45px;
-        width: 29vw;
+        width: 540px;
         height: 100%;
 
         &:nth-child(even) {

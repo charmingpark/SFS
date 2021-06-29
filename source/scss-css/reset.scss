@@ -148,17 +148,6 @@ body {
   margin: 3px 15px;
 }
 
-.after::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 100%;
-  background: $wine;
-  z-index: 2;
-}
-
 .title {
   width: 100%;
   height: auto;
