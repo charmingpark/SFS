@@ -148,11 +148,12 @@ body {
   margin: 3px 15px;
 }
 
-.tac {
+.tac { // title이 가운데로 쓰여야 할 때 사용
   text-align: center;
+  h2::after{right: 0;margin: 0 auto;}
 }
 
-// title이 가운데로 쓰여야 할 때 사용
+
 .title {
   width: 100%;
   height: auto;
@@ -186,5 +187,15 @@ body {
       height: 2px;
       width: 40px;
     }
+  }
+}
+
+.btnBox {
+  margin-top: 50px;
+
+  button {
+    width: 53px;
+    height: 53px;
+
   }
 }

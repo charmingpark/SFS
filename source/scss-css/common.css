@@ -236,6 +236,11 @@ vw-calc770(태블릿 사이즈size) {
       background: #720000; }
 
 .menuTop .sub_menu ul {
+  /* 제어 안되고있음 : 수정필요 */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between; }
   .menuTop .sub_menu ul li a {
@@ -305,8 +310,13 @@ vw-calc770(태블릿 사이즈size) {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
     display: block;
-    display: flex;
     color: #fff;
+    /* 제어 안되고있음 : 수정필요 */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;

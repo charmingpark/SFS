@@ -200,7 +200,7 @@
 }
 
 .menuTop {
-  display: flex; // flex 방향을 모바일에서 위아래로 바꾸면 해결 됨
+  @include flex; // flex 방향을 모바일에서 위아래로 바꾸면 해결 됨
   width: 100%;
   height: 100px;
   justify-content: space-between;
@@ -274,9 +274,10 @@
       li {
         top: 0;
         left: 0;
-        
 
-        a {padding-left: 50px;
+
+        a {
+          padding-left: 50px;
           height: 50px;
           width: 100%;
           font-size: 16px;
@@ -324,8 +325,11 @@
   z-index: 2;
   @include transition (all 0.5s);
 
-  &:hover{ right: 0; 
-  }/* js로 focus제어 */
+  &:hover {
+    right: 0;
+  }
+
+  /* js로 focus제어 */
 
   li {
     height: 48px;
@@ -354,7 +358,6 @@
 
   section {
     width: 100%;
-    @include flex;
     box-sizing: border-box;
   }
 
@@ -371,15 +374,7 @@
       width: 100%;
       max-width: 35%;
 
-      .btnBox {
-        margin-top: 50px;
 
-        button {
-          width: 53px;
-          height: 53px;
-
-        }
-      }
     }
 
     article.view {
@@ -488,8 +483,88 @@
   }
 
   #cnt4 {
+    width: 100%;
     height: 850px;
+    border: 1px solid #000;
     margin-bottom: 240px;
+
+    .title {
+      width: 100%;
+      box-sizing: border-box;
+      height: 200px;
+
+    }
+
+    .grade {
+      text-align: center;
+      width: 92%;
+      margin: 0 4%;
+      background: rgba(64, 224, 208, 0.349);
+      display: flex;
+
+      li {
+        width: 25%;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          padding-bottom: 130%;
+          height: 0;
+        }
+
+        a {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          bottom: -85%;
+          left: 0;
+          font-size: 35px;
+          text-transform: uppercase;
+        }
+
+        svg {
+          position: absolute;
+
+          top: 0;
+          left: 50%;
+          @include translateX-50;
+
+          height: 66px;
+          width: 442px;
+
+          font-family: "Raleway", sans-serif;
+          font-weight: 900;
+          border: 1px solid #000;
+
+          // stroke-dasharray: 1200;
+          // stroke-dashoffset: 1200;
+          /* dasharray가 있으면 글씨가 안보이게됨. */
+
+          z-index: 1;
+          animation: 30s ease 0s 1 normal forwards running draw;
+
+          text {
+            fill: transparent;
+            stroke: $midnight;
+            stroke-width: 1.5px;
+            letter-spacing: 3px;
+            stroke-linecap: round;
+            text-transform: uppercase;
+            font-size: 42px;
+          }
+        }
+      }
+    }
+
+    /* 
+.rbox li{ }
+.rbox li::after{}  >  ::before, padding-top 도 가능
+.rbox li a{top: 0;left: 0;width: 100%;height: 100%;}
+
+*/
+
   }
 
   #cnt5 {
