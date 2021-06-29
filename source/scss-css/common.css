@@ -314,6 +314,18 @@ vw-calc770(태블릿 사이즈size) {
     overflow: hidden; }
     .sticky li a:hover, .sticky li a:focus {
       background: #720000; }
+  .sticky li .img {
+    background: no-repeat 100% / cover; }
+  .sticky li:nth-of-type(1) .img {
+    background-image: url(../images/SVG/login_1.svg); }
+  .sticky li:nth-of-type(2) .img {
+    background-image: url(../images/SVG/contact_1.svg); }
+  .sticky li:nth-of-type(3) .img {
+    background-image: url(../images/SVG/visit_1.svg); }
+  .sticky li:nth-of-type(4) .img {
+    background-image: url(../images/SVG/apply_1.svg); }
+  .sticky li:nth-of-type(5) .img {
+    background-image: url(../images/SVG/slide_up_1.svg); }
   .sticky li span {
     padding: 10px; }
 

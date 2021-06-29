@@ -292,7 +292,7 @@ vw-calc770(태블릿 사이즈size) {
       height: 48px;
       letter-spacing: 3.5px;
       font-size: 13px; }
-    .sticky li img {
+    .sticky li .img {
       width: 48px;
       height: 48px; }
     .sticky li span {
