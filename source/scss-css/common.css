@@ -261,8 +261,8 @@ vw-calc770(태블릿 사이즈size) {
 .menu_slide_out a:focus {
   color: #f0c2c9;
   border-color: #ffdbe1; }
-.menu_slide_out svg:hover .cls-1,
-.menu_slide_out svg:focus .cls-1 {
+.menu_slide_out a:hover svg .cls-1,
+.menu_slide_out a:focus svg .cls-1 {
   fill: #f0c2c9; }
 
 .main_menu {

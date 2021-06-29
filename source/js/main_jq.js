@@ -6,6 +6,7 @@ $(function () {
 	/* focus 엔터 눌러도 다음으로 바로 넘어가지 않고 제자리에 있도록 제어 */
 	// 엔터로 버튼 클릭시 포커스 이탈함 : 제어가 불필요한가? 
 
+	/* search 에서 input태그 에게 달린 label */
 	$('#site_search_txt').on({
 		focus: function () {
 			$(this).prev().css('left', 990);
@@ -15,7 +16,7 @@ $(function () {
 		}
 	});
 
-	/* 메뉴 모달 안에 있는 네비게이션*/
+	/* 메뉴 모달 안에 있는 메인 네비게이션 */
 	// dep2의 ul로 가면 dep1의 애니메이션이 남아있게 제어하기
 	const $header = $('#headerWrap');
 	const $gnb = $('.menu.on #menu_modal .main_menu > ul');

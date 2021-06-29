@@ -209,12 +209,13 @@
     ul {
       li {
         margin-right: 20px;
-        height: 100px;
+        height: 20px;
+        padding: 40px 0;
 
         a {
           font-size: 11px;
           letter-spacing: 3px;
-          line-height: 110px;
+          line-height: 20px;
         }
       }
     }
@@ -273,8 +274,9 @@
       li {
         top: 0;
         left: 0;
+        
 
-        a {
+        a {padding-left: 50px;
           height: 50px;
           width: 100%;
           font-size: 16px;

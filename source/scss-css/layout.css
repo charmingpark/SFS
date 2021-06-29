@@ -202,11 +202,12 @@ vw-calc770(태블릿 사이즈size) {
   justify-content: space-between; }
   .menuTop .sub_menu ul li {
     margin-right: 20px;
-    height: 100px; }
+    height: 20px;
+    padding: 40px 0; }
     .menuTop .sub_menu ul li a {
       font-size: 11px;
       letter-spacing: 3px;
-      line-height: 110px; }
+      line-height: 20px; }
 
 .search.on .search_slide_out,
 .menu.on .menu_slide_out {
@@ -244,6 +245,7 @@ vw-calc770(태블릿 사이즈size) {
       top: 0;
       left: 0; }
       .main_menu > ul ul li a {
+        padding-left: 50px;
         height: 50px;
         width: 100%;
         font-size: 16px;
