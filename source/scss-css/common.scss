@@ -336,10 +336,10 @@
   }
   
 }
-.sticky li:last-child{
-  background: #000;
+.sticky li:last-child a{
+  background: $midnight;
+  &:hover, &:focus{background: $silkynight;}
 }
-
 
 header.controller,
 article.board li {
@@ -348,19 +348,19 @@ article.board li {
 }
 
 /* 뒤에 배경보고 레이아웃 만들기 */
-// #cnt1::before {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 10286px;
-//   top: -51vh
-//     /* 학원 -102vh / 집 chrome -152vh */
-//   ;
-//   left: 0;
-//   background: url(../images/bodylayout.jpg) no-repeat 100% / contain;
-//   z-index: -1;
-//   opacity: 0.2;
-// }
+#cnt1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10286px;
+  top: -51vh;
+    /* 학원 -105vh / 집 chrome -51vh */
+  ;
+  left: 0;
+  background: url(../images/bodylayout.jpg) no-repeat 100% / contain;
+  z-index: -1;
+  opacity: 0.2;
+}
 
 
 @-webkit-keyframes upNdown {

@@ -178,7 +178,7 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%); }
 
-/* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} ???? */
+/* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
 .arrow {
   display: inline-block;
@@ -191,6 +191,9 @@ body {
   transition: all 0.25s;
   position: relative;
   margin: 3px 15px; }
+
+.tac {
+  text-align: center; }
 
 .title {
   width: 100%;

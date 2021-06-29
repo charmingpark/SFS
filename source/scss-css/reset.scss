@@ -135,7 +135,7 @@ body {
   clip-path: inset(50%);
 }
 
-/* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} ???? */
+/* .max1440{width: 100%;max-width: 1440px;margin: 0 auto;} */
 /* 반응형 크기 제어  */
 
 .arrow {
@@ -148,6 +148,11 @@ body {
   margin: 3px 15px;
 }
 
+.tac {
+  text-align: center;
+}
+
+// title이 가운데로 쓰여야 할 때 사용
 .title {
   width: 100%;
   height: auto;

@@ -74,6 +74,7 @@ vw-calc770(태블릿 사이즈size) {
   display: -webkit-flex;
   display: flex; }
   .fullVdo a {
+    padding-top: 15px;
     display: block;
     width: 300px;
     height: 40px;
@@ -107,14 +108,14 @@ vw-calc770(태블릿 사이즈size) {
     height: 2.6875rem;
     border-radius: 50%; }
   .videoCtrl #play-button {
-    background: #1a1b1b url(../images/SVG/play.svg) no-repeat 100%/cover;
+    background: #395061 url(../images/SVG/play.svg) no-repeat 100%/cover;
     visibility: hidden;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
   .videoCtrl #pause-button {
-    background: #1a1b1b url(../images/SVG/pause.svg) no-repeat 100%/cover;
+    background: #395061 url(../images/SVG/pause.svg) no-repeat 100%/cover;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -123,7 +124,7 @@ vw-calc770(태블릿 사이즈size) {
   .videoCtrl #pause-button:hover,
   .videoCtrl #play-button:focus,
   .videoCtrl #pause-button:focus {
-    background-color: #444; }
+    background-color: #5a6e7e; }
 
 .explr {
   display: block;

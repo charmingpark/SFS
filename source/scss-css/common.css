@@ -317,8 +317,10 @@ vw-calc770(태블릿 사이즈size) {
   .sticky li span {
     padding: 10px; }
 
-.sticky li:last-child {
-  background: #000; }
+.sticky li:last-child a {
+  background: #395061; }
+  .sticky li:last-child a:hover, .sticky li:last-child a:focus {
+    background: #5a6e7e; }
 
 header.controller,
 article.board li {
@@ -326,6 +328,18 @@ article.board li {
   box-sizing: border-box; }
 
 /* 뒤에 배경보고 레이아웃 만들기 */
+#cnt1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10286px;
+  top: -51vh;
+  /* 학원 -105vh / 집 chrome -51vh */
+  left: 0;
+  background: url(../images/bodylayout.jpg) no-repeat 100%/contain;
+  z-index: -1;
+  opacity: 0.2; }
+
 @-webkit-keyframes upNdown {
   0%,
   100% {

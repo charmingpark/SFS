@@ -201,8 +201,8 @@ vw-calc770(태블릿 사이즈size) {
   height: 100px;
   justify-content: space-between; }
   .menuTop .sub_menu ul li {
-    margin-right: 20px;
     height: 20px;
+    margin-right: 20px;
     padding: 40px 0; }
     .menuTop .sub_menu ul li a {
       font-size: 11px;
